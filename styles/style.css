@@ -81,6 +81,53 @@ input[type=date]::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-checkbox input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox input[type=checkbox] + span {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.custom-checkbox input[type=checkbox] + span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.custom-checkbox input[type=checkbox]:checked + span:before {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.custom-checkbox input[type=checkbox]:checked + span:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+}
+
 html {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
@@ -231,6 +278,21 @@ main .main__title #book span {
   margin-right: 7.3px;
   height: 16px;
 }
+.trip-filter form .flex .flex__item #input {
+  position: relative;
+  z-index: 1;
+}
+.trip-filter form .flex .flex__item #input img {
+  cursor: pointer;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translate(0, -49%);
+  display: block;
+  width: 22px;
+  height: 21px;
+  z-index: 2;
+}
 .trip-filter form .flex .flex__item:nth-child(2) div {
   position: relative;
   z-index: 1;
@@ -304,6 +366,30 @@ main .main__title #book span {
 .trip-list ul li .cost-plan .content, .trip-list ul li .cost-plan .name, .trip-list ul li .cost-fact .content, .trip-list ul li .cost-fact .name {
   text-align: right;
 }
+.trip-list ul li .city {
+  position: relative;
+}
+.trip-list ul li .city .content {
+  max-width: 58rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  vertical-align: middle;
+  position: relative;
+  padding-right: 20px;
+  z-index: 10;
+}
+.trip-list ul li .city .content div {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.trip-list ul li .city .content div svg {
+  display: flex;
+  align-items: center;
+}
 .trip-list ul li .status {
   align-items: center;
 }
@@ -320,6 +406,36 @@ main .main__title #book span {
   background-color: #eef0f2;
   font-size: 12px;
   color: #5b6871;
+}
+
+.tooltip {
+  position: absolute;
+  top: -5rem !important;
+  left: -50%;
+  transform: translateX(-50%);
+  width: 219px;
+  height: max-content;
+  max-height: 100px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #303940;
+  color: white;
+  display: block;
+  opacity: 0;
+  white-space: normal !important;
+  font-size: 12px;
+  word-wrap: break-word;
+  transition: opacity 0.3s ease;
+}
+.tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 15px;
+  transform: translateX(-50%);
+  border-width: 7px;
+  border-style: solid;
+  border-color: #303940 transparent transparent transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
