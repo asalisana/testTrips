@@ -13,9 +13,9 @@
 </head>
 <body>
     <header class="header__grid">
-        <div class="header__grid__item list">
-            Поездки
-        </div>
+        <ul class="header__grid__item list">
+            <li>Поездки</li>
+        </ul>
         <div class="header__grid__item user">
             <a>Заболоцкий К.О</a>
             <a href="#" id="button">
@@ -25,5 +25,511 @@
             </a>
         </div>
     </header>
+    <main>
+        <section class="main__title">
+            <h1>Мои поездки</h1>
+            <button id="book">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7a1 1 0 0 1 1 1v3h3a1 1 0 0 1 0 2h-3v3a1 1 0 0 1-2 0v-3H8a1 1 0 0 1 0-2h3V8a1 1 0 0 1 1-1z" fill="#fff"/>
+                </svg>
+                <span>Оформить поездку</span>
+            </button>
+        </section>
+        <section class="trip-filter">
+            <form>
+                <div class="flex">
+                    <div class="flex__item">
+                        <span>
+                            <label for="date-from">Период с:</label>
+                            <input type="date" id="date-from" name="date-from" value="2024-02-22">
+                        </span>
+                        <span>
+                            <label for="date-to">по:</label>
+                            <input type="date" id="date-to" name="date-to" placeholder="Выбрать...">
+                        </span>
+                    </div>
+                    <div class="flex__item">
+                        <div>
+                            <label for="search"></label>
+                            <input type="search" id="search" name="search" placeholder="Поиск...">
+                            <img src="images/search.svg" alt="search">
+                        </div>
+                    </div>
+                    <div class="flex__item">
+                        <a class="reset">
+                            <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="m8 9.414-3.293 3.293-1.414-1.414L6.586 8 3.293 4.707l1.414-1.414L8 6.586l3.293-3.293 1.414 1.414L9.414 8l3.293 3.293-1.414 1.414L8 9.414z" fill="#4094F7"/>
+                            </svg>
+                            </span>
+                            Сбросить все
+                        </a>
+                    </div>
+                </div>
+                <label id="checkbox">
+                    <input type="checkbox" name="archive"> <span>Показать архивные поездки</span>
+                </label>
+            </form>
+        </section>
+        <figure class="line">
+            <div class="blue">
+            </div>
+            <div class="thin-blue">
+            </div>
+        </figure>
+        <section class="trip-list">
+            <ul>
+                <li class="trip-list__grid">
+                    <div class="number flex">
+                        <div class="name">
+                            № поездки
+                        </div>
+                        <div class="content">
+                            000115
+                        </div>
+                    </div>
+                    <div class="date flex">
+                        <div class="name">
+                            Дата поездки
+                        </div>
+                        <div class="content">
+                            22.02.2024 - 27.02.2024
+                        </div>
+                    </div>
+                    <div class="cost-plan flex">
+                        <div class="name">
+                            Сумма, план
+                        </div>
+                        <div class="content flex">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="cost-fact flex">
+                        <div class="name">
+                            Сумма, факт
+                        </div>
+                        <div class="content">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="city flex">
+                        <div class="name">
+                            Город
+                        </div>
+                        <div class="content">
+                            Москва, Ярославль, Ижевск, Владимир
+                        </div>
+                    </div>
+                    <div class="status flex">
+                        <div class="name">
+                            Статус
+                        </div>
+                        <a class="content">
+                            Документы
+                        </a>
+                    </div>
+                </li>
+                <li class="trip-list__grid">
+                    <div class="number flex">
+                        <div class="name">
+                            № поездки
+                        </div>
+                        <div class="content">
+                            000115
+                        </div>
+                    </div>
+                    <div class="date flex">
+                        <div class="name">
+                            Дата поездки
+                        </div>
+                        <div class="content">
+                            22.02.2024 - 27.02.2024
+                        </div>
+                    </div>
+                    <div class="cost-plan flex">
+                        <div class="name">
+                            Сумма, план
+                        </div>
+                        <div class="content flex">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="cost-fact flex">
+                        <div class="name">
+                            Сумма, факт
+                        </div>
+                        <div class="content">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="city flex">
+                        <div class="name">
+                            Город
+                        </div>
+                        <div class="content">
+                            Москва, Ярославль, Ижевск, Владимир
+                        </div>
+                    </div>
+                    <div class="status flex">
+                        <div class="name">
+                            Статус
+                        </div>
+                        <a class="content">
+                            Документы
+                        </a>
+                    </div>
+                </li>
+                <li class="trip-list__grid">
+                    <div class="number flex">
+                        <div class="name">
+                            № поездки
+                        </div>
+                        <div class="content">
+                            000115
+                        </div>
+                    </div>
+                    <div class="date flex">
+                        <div class="name">
+                            Дата поездки
+                        </div>
+                        <div class="content">
+                            22.02.2024 - 27.02.2024
+                        </div>
+                    </div>
+                    <div class="cost-plan flex">
+                        <div class="name">
+                            Сумма, план
+                        </div>
+                        <div class="content flex">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="cost-fact flex">
+                        <div class="name">
+                            Сумма, факт
+                        </div>
+                        <div class="content">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="city flex">
+                        <div class="name">
+                            Город
+                        </div>
+                        <div class="content">
+                            Москва, Ярославль, Ижевск, Владимир
+                        </div>
+                    </div>
+                    <div class="status flex">
+                        <div class="name">
+                            Статус
+                        </div>
+                        <a class="content">
+                            Документы
+                        </a>
+                    </div>
+                </li>
+                <li class="trip-list__grid">
+                    <div class="number flex">
+                        <div class="name">
+                            № поездки
+                        </div>
+                        <div class="content">
+                            000115
+                        </div>
+                    </div>
+                    <div class="date flex">
+                        <div class="name">
+                            Дата поездки
+                        </div>
+                        <div class="content">
+                            22.02.2024 - 27.02.2024
+                        </div>
+                    </div>
+                    <div class="cost-plan flex">
+                        <div class="name">
+                            Сумма, план
+                        </div>
+                        <div class="content flex">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="cost-fact flex">
+                        <div class="name">
+                            Сумма, факт
+                        </div>
+                        <div class="content">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="city flex">
+                        <div class="name">
+                            Город
+                        </div>
+                        <div class="content">
+                            Москва, Ярославль, Ижевск, Владимир
+                        </div>
+                    </div>
+                    <div class="status flex">
+                        <div class="name">
+                            Статус
+                        </div>
+                        <a class="content">
+                            Документы
+                        </a>
+                    </div>
+                </li>
+                <li class="trip-list__grid">
+                    <div class="number flex">
+                        <div class="name">
+                            № поездки
+                        </div>
+                        <div class="content">
+                            000115
+                        </div>
+                    </div>
+                    <div class="date flex">
+                        <div class="name">
+                            Дата поездки
+                        </div>
+                        <div class="content">
+                            22.02.2024 - 27.02.2024
+                        </div>
+                    </div>
+                    <div class="cost-plan flex">
+                        <div class="name">
+                            Сумма, план
+                        </div>
+                        <div class="content flex">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="cost-fact flex">
+                        <div class="name">
+                            Сумма, факт
+                        </div>
+                        <div class="content">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="city flex">
+                        <div class="name">
+                            Город
+                        </div>
+                        <div class="content">
+                            Москва, Ярославль, Ижевск, Владимир
+                        </div>
+                    </div>
+                    <div class="status flex">
+                        <div class="name">
+                            Статус
+                        </div>
+                        <a class="content">
+                            Документы
+                        </a>
+                    </div>
+                </li>
+                <li class="trip-list__grid">
+                    <div class="number flex">
+                        <div class="name">
+                            № поездки
+                        </div>
+                        <div class="content">
+                            000115
+                        </div>
+                    </div>
+                    <div class="date flex">
+                        <div class="name">
+                            Дата поездки
+                        </div>
+                        <div class="content">
+                            22.02.2024 - 27.02.2024
+                        </div>
+                    </div>
+                    <div class="cost-plan flex">
+                        <div class="name">
+                            Сумма, план
+                        </div>
+                        <div class="content flex">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="cost-fact flex">
+                        <div class="name">
+                            Сумма, факт
+                        </div>
+                        <div class="content">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="city flex">
+                        <div class="name">
+                            Город
+                        </div>
+                        <div class="content">
+                            Москва, Ярославль, Ижевск, Владимир
+                        </div>
+                    </div>
+                    <div class="status flex">
+                        <div class="name">
+                            Статус
+                        </div>
+                        <a class="content">
+                            Документы
+                        </a>
+                    </div>
+                </li>
+                <li class="trip-list__grid">
+                    <div class="number flex">
+                        <div class="name">
+                            № поездки
+                        </div>
+                        <div class="content">
+                            000115
+                        </div>
+                    </div>
+                    <div class="date flex">
+                        <div class="name">
+                            Дата поездки
+                        </div>
+                        <div class="content">
+                            22.02.2024 - 27.02.2024
+                        </div>
+                    </div>
+                    <div class="cost-plan flex">
+                        <div class="name">
+                            Сумма, план
+                        </div>
+                        <div class="content flex">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="cost-fact flex">
+                        <div class="name">
+                            Сумма, факт
+                        </div>
+                        <div class="content">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="city flex">
+                        <div class="name">
+                            Город
+                        </div>
+                        <div class="content">
+                            Москва, Ярославль, Ижевск, Владимир
+                        </div>
+                    </div>
+                    <div class="status flex">
+                        <div class="name">
+                            Статус
+                        </div>
+                        <a class="content">
+                            Документы
+                        </a>
+                    </div>
+                </li>
+                <li class="trip-list__grid">
+                    <div class="number flex">
+                        <div class="name">
+                            № поездки
+                        </div>
+                        <div class="content">
+                            000115
+                        </div>
+                    </div>
+                    <div class="date flex">
+                        <div class="name">
+                            Дата поездки
+                        </div>
+                        <div class="content">
+                            22.02.2024 - 27.02.2024
+                        </div>
+                    </div>
+                    <div class="cost-plan flex">
+                        <div class="name">
+                            Сумма, план
+                        </div>
+                        <div class="content flex">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="cost-fact flex">
+                        <div class="name">
+                            Сумма, факт
+                        </div>
+                        <div class="content">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="city flex">
+                        <div class="name">
+                            Город
+                        </div>
+                        <div class="content">
+                            Москва, Ярославль, Ижевск, Владимир
+                        </div>
+                    </div>
+                    <div class="status flex">
+                        <div class="name">
+                            Статус
+                        </div>
+                        <a class="content">
+                            Документы
+                        </a>
+                    </div>
+                </li>
+                <li class="trip-list__grid">
+                    <div class="number flex">
+                        <div class="name">
+                            № поездки
+                        </div>
+                        <div class="content">
+                            000115
+                        </div>
+                    </div>
+                    <div class="date flex">
+                        <div class="name">
+                            Дата поездки
+                        </div>
+                        <div class="content">
+                            22.02.2024 - 27.02.2024
+                        </div>
+                    </div>
+                    <div class="cost-plan flex">
+                        <div class="name">
+                            Сумма, план
+                        </div>
+                        <div class="content flex">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="cost-fact flex">
+                        <div class="name">
+                            Сумма, факт
+                        </div>
+                        <div class="content">
+                            29 400,00
+                        </div>
+                    </div>
+                    <div class="city flex">
+                        <div class="name">
+                            Город
+                        </div>
+                        <div class="content">
+                            Москва, Ярославль, Ижевск, Владимир
+                        </div>
+                    </div>
+                    <div class="status flex">
+                        <div class="name">
+                            Статус
+                        </div>
+                        <a class="content">
+                            Документы
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
